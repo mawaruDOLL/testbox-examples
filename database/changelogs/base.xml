@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	<changeSet author="kmolnar" id="base-1">
+		<createTable tableName="tbl_users">
+			<column autoIncrement="true" name="user_id" type="int">
+				<constraints primaryKey="true" primaryKeyName="tbl_users_pk"/>
+			</column>
+			<column name="username" type="varchar(50)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="first_name" type="varchar(100)" />
+			<column name="last_name" type="varchar(100)" />
+		</createTable>
+	</changeSet>
+	
+	<changeSet author="kmolnar" id="base-2">
+		<createTable tableName="tbl_entries">
+			<column autoIncrement="true" name="entry_id" type="int">
+				<constraints primaryKey="true" primaryKeyName="tbl_users_pk"/>
+			</column>
+			<column name="user_id" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="entry_date" type="datetime">
+				<constraints nullable="false"/>
+			</column>
+			<column name="title" type="varchar(200)" />
+			<column name="entry_text" type="varchar(2000)" />
+		</createTable>
+	</changeSet>
+</databaseChangeLog>
