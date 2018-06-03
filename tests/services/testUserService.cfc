@@ -41,13 +41,8 @@ component extends="testbox.system.BaseSpec" {
 		// Set the persistence service to return null when passed 3
 		userPersistenceMock.$("getUserById").$args(3).$results();
 		
-		try {
+		expect(function() {
 			userService.getUserById(3);
-		}
-		catch (any e) {
-			if (e.type != "missingUser") {
-				fail("The error type was invalid #e.type#");
-			}
-		}
+		}).toThrow("missingUser");
 	}
 }

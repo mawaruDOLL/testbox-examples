@@ -31,8 +31,6 @@ component extends="framework.one" {
 	}
 
 	public void function setupSession() {
-		var userService = getBeanFactory().getBean("userService");
-		session.user = userService.getUserById(1);
 	}
 
 	public void function onSessionEnd(required struct sessionScope, required struct appScope) {
