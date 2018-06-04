@@ -4,16 +4,13 @@
     },
     "devDependencies":{
         "testbox":"^2.5.0",
-				"liquibase":"http://dit-arl-jenkins:8081/artifactory/commandbox/liquibase-3.5.3.zip",
-				"sqljdbc":"http://dit-arl-jenkins:8081/artifactory/commandbox/sqljdbc-6.4.0.zip"
+        "liquibase":"http://dit-arl-jenkins:8081/artifactory/commandbox/liquibase-3.5.3.zip",
+        "sqljdbc":"http://dit-arl-jenkins:8081/artifactory/commandbox/sqljdbc-6.4.0.zip"
     },
     "installPaths":{
-        "fw1":"src/framework",
-        "testbox":"testbox",
-				"liquibase":"database",
-				"sqljdbc":"database/sqljdbc"
-    },
-    "testbox":{
-        "runner":"tests/runner.cfm"
+        "fw1":"src/framework/",
+        "testbox":"testbox/",
+        "liquibase":"database/",
+        "sqljdbc":"database/sqljdbc/"
     }
 }

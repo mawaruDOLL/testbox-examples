@@ -2,5 +2,13 @@
     "app":{
         "cfengine":"adobe@2016"
     },
-    "name":"testbox-examples"
+    "name":"testbox-examples",
+    "http":{
+        "port":"54726",
+        "enable":"true"
+    },
+    "testbox":{
+        "runner":"http://127.0.0.1:54726/tests/runner.cfm",
+        "directory":"tests"
+    }
 }
