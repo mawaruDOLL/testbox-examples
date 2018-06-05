@@ -3,12 +3,14 @@
         "cfengine":"adobe@2016"
     },
     "name":"testbox-examples",
-    "http":{
-        "port":"54726",
-        "enable":"true"
-    },
     "testbox":{
         "runner":"http://127.0.0.1:54726/tests/runner.cfm",
         "directory":"tests"
+    },
+    "host":"127.0.0.1",
+    "web":{
+        "http":{
+            "port":"54726"
+        }
     }
 }

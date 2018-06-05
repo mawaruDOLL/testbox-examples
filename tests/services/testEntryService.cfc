@@ -11,8 +11,8 @@ component extends="testbox.system.BaseSpec" {
 						.toHaveLength(1);
 				});
 				
-				it("have a title that does not exceed 200 characters
-					and text that does not exceed 2000 characters",
+				it("have a title that does not exceed 200 characters"
+					& " and text that does not exceed 2000 characters",
 				function() {
 					testTitle = "";
 					for (i = 1; i <= 201; ++i) {
@@ -33,11 +33,7 @@ component extends="testbox.system.BaseSpec" {
 				});
 			});
 			
-			describe("searches journal entries", function() {
-				it("by date", function() {
-					fail("Not implemented");
-				});
-				
+			describe("searches journal entries", function() {				
 				it("by keyword", function() {
 					fail("Not implemented");
 				});
