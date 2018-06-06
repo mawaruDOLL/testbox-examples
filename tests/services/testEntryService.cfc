@@ -1,8 +1,10 @@
 component extends="testbox.system.BaseSpec" {
+	function beforeAll() {
+		entryService = createMock("src.services.entryService");
+	}
+	
 	function run() {
 		describe("The entry service", function() {
-			entryService = createMock("src.services.entryService");
-			
 			describe("validates journal entries", function() {
 				it("have entry text", function() {
 					entryMock = createMock("src.models.beans.entry");
